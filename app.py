@@ -18,6 +18,7 @@ app = Flask(__name__)
 def hello():
     return ('please redirect your calls to 127.0.0.1:5000/ingredients')
 
+
 @app.route('/test/')
 def index():
     dict_obj = {
@@ -34,6 +35,7 @@ def index():
     resp.status_code = 200
     print(resp)
     return resp
+
 @app.route('/ingredients/')
 def ingredients():
     arg1 = request.args['arg1']
